@@ -5,5 +5,4 @@ class Movement < ApplicationRecord
   validates :author_id, presence: true
   validates :name, presence: true
   validates :amount, presence: true
-
 end
