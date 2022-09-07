@@ -1,0 +1,35 @@
+<div class="newheader">
+  <div>&nbsp;&lt;</div>
+  <div>NEW MOVEMENT</div>
+  <div>&nbsp;&nbsp;</div>
+</div>
+<div>
+<%= form_with model: movement, url: create_movement_path, method: :post, local: true, scope: :movement do |f| %>
+  <div class="fitem">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :size => 30, :required => true %>
+  </div>
+
+  <div class="fitem">
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount, step: 0.01, :size => 10, :required => true %>
+  </div>
+
+  <div class="fitem">
+    <%= f.label :category %><br>
+    <%= f.text_field :category, :size => 20, :required => true %>
+  </div>
+
+  <div class="fitem">
+    <%= f.label :category2 %><br>
+    <%= f.text_field :category2, :size => 20 %>
+  </div>
+
+  <div class="fitem">
+    <%= f.label :category3 %><br>
+    <%= f.text_field :category3, :size => 20 %>
+  </div>
+
+  <%= f.submit "Add Movement" , class: "submit" %>
+<% end %>
+</div>

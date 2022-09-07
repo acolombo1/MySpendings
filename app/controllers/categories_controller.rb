@@ -1,12 +1,12 @@
-class PostsController < ApplicationController
+class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @categories = current_user.categories
-    @current_user = current_user
   end
 
   def show
-    @current_user = current_user
-    @category = Category.find(params[:id])
+    @category = Category.find(params[:category_id])
     @movements = @category.movements.order(Arel.sql('created_at DESC'))
   end
 

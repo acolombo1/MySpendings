@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  get '/user' => "categories#index", :as => :user_root
 
   # Defines the root path route ("/")
   root "users#splash"
   get "/categories", to: "categories#index", as: "categories"
-  get "/categories/:category_id", to: "category#show", as: "category"
+  get "/categories/:category_id", to: "categories#show", as: "category"
   
   get '/categories/new', to: 'categories#new', as: 'new_category'
   post '/category', to: 'categories#create', as: 'create_category'

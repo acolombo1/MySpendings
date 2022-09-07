@@ -1,0 +1,11 @@
+<div class="notice"><%= notice %></div>
+<div class="alert"><%= alert %></div>
+<div class="centered">
+  <%= image_tag("logo.png", :alt => "My Spendings") %>
+</div>
+<div class="bottom">
+
+  <%= button_to 'LOG IN', new_user_session_path, method: :get, :class => 'loginbutton' %>
+  <%= button_to 'SIGN UP', new_user_registration_path, method: :get, :class => 'signupbutton' %>
+
+</div>
