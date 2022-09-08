@@ -1,0 +1,42 @@
+<div class="newheader">
+<div>&nbsp;<%= link_to "<", categories_path, class: "rawlinkwhite" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div>MOVEMENTS</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+<% flash.each do |type, msg| %>
+  <%= msg %>
+<% end %>
+<div class="mainsection">
+  <div class="catitem">
+    <div class="icontitle">
+      <div class="iconcontainer">
+        <%= image_tag("#{ @category.icon }", :alt => "", class: "constrained") %>
+      </div>
+      <div class="cattitle">
+        <%= @category.name %>
+      </div>
+    </div>
+    <div class="catamount">
+      <%= number_to_currency(@category.total) %>
+    </div>
+  </div>
+  <hr>
+  <% @movements.each do |movement| %>
+    <div class="catitem">
+      <div class="icontitle">
+        <div class="iconcontainer">
+          <%= image_tag("spending.png", :alt => "", class: "constrained") %>
+        </div>
+        <div class="cattitle">
+          <%= movement.name %>
+        </div>
+      </div>
+      <div class="catamount">
+        <%= number_to_currency(movement.amount) %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="buttonwrapper">
+  <%= button_to 'NEW MOVEMENT', new_movement_path, method: :get, :class => 'loginbutton' %>
+</div>

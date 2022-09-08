@@ -1,12 +1,12 @@
-class PostsController < ApplicationController
+class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @categories = current_user.categories
-    @current_user = current_user
   end
 
   def show
-    @current_user = current_user
-    @category = Category.find(params[:id])
+    @category = Category.find(params[:category_id])
     @movements = @category.movements.order(Arel.sql('created_at DESC'))
   end
 
@@ -18,8 +18,11 @@ class PostsController < ApplicationController
   def create
     category = Category.new(params.require(:category).permit(:name, :icon))
     category.author_id = current_user.id
-
-    if category.save
+    found = Category.where(name: category.name, author_id: category.author_id)
+    if found != []
+      flash.now[:error] = 'Error: Category with that name already exists'
+      render :new, locals: { category: }, status: 422
+    elsif category.save
       flash[:success] = 'Category created successfully'
       redirect_to "/categories/#{category.id}"
     else
