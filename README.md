@@ -48,5 +48,6 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
+
 Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella), which is
 [Creative Commons licensed](https://creativecommons.org/licenses/by-nc/4.0/).
