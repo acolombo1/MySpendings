@@ -6,8 +6,9 @@
   <div>CATEGORIES</div>
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
-<div class="notice"><%= notice %></div>
-<div class="alert"><%= alert %></div>
+<% flash.each do |type, msg| %>
+  <%= msg %>
+<% end %>
 <div class="mainsection">
   <% @categories.each do |category| %> 
     <div class="catitem">
@@ -18,7 +19,9 @@
           <% end %>
         </div>
         <div class="cattitle">
-          <%= category.name %>
+          <%= link_to "/categories/#{ category.id }", class: "nodeco" do %>
+            <%= category.name %>
+          <% end %>
         </div>
       </div>
       <div class="catamount">
@@ -26,4 +29,7 @@
       </div>
     </div>
   <% end %>
+</div>
+<div class="buttonwrapper">
+  <%= button_to 'Create NEW CATEGORY', new_category_path, method: :get, :class => 'loginbutton' %>
 </div>

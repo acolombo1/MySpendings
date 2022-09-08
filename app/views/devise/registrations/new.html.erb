@@ -6,8 +6,9 @@
       <div><%= f.submit "Sign up", class: 'submitlogin' %>&nbsp;</div>
     </div>
     <%= render "devise/shared/error_messages", resource: resource %>
-    <div class="notice"><%= notice %></div>
-    <div class="alert"><%= alert %></div>
+    <% flash.each do |type, msg| %>
+      <%= msg %>
+    <% end %>
     <div class="logincontainer">
 
       <div class="fieldcontainer">
@@ -17,7 +18,7 @@
 
       <div class="fieldcontainer">
         <%= f.label :email, class: "hidden" %>
-        <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "field" %>
+        <%= f.email_field :email, placeholder: "Email", class: "field" %>
       </div>
 
       <div class="fieldcontainer">

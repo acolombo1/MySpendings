@@ -1,5 +1,6 @@
-<div class="notice"><%= notice %></div>
-<div class="alert"><%= alert %></div>
+<% flash.each do |type, msg| %>
+  <%= msg %>
+<% end %>
 <div class="centered">
   <%= image_tag("logo.png", :alt => "My Spendings") %>
 </div>

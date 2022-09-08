@@ -5,8 +5,9 @@
       <div>LOG IN</div>
       <div><%= f.submit "Log in", class: 'submitlogin' %>&nbsp;</div>
     </div>
-    <div class="notice"><%= notice %></div>
-    <div class="alert"><%= alert %></div>
+    <% flash.each do |type, msg| %>
+      <%= msg %>
+    <% end %>
     <div class="logincontainer">
       <div class="fieldcontainer">
         <%= f.label :email, class: "hidden" %>

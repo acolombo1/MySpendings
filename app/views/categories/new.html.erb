@@ -1,0 +1,39 @@
+<div class="allcontainer">
+  <%= form_with model: category, url: create_category_path, method: :post, local: true, scope: :category do |f| %>
+    <div class="newheader">
+      <div>&nbsp;<%= link_to "<", categories_path, class: "rawlinkwhite" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>NEW CATEGORY</div>
+      <div><%= f.submit "Create", class: 'submitlogin' %>&nbsp;</div>
+    </div>
+    <% flash.each do |type, msg| %>
+      <%= msg %>
+    <% end %>
+    <div class="logincontainer">
+      <div class="fieldcontainer">
+        <%= f.label :icon, class: "hidden" %>
+        <%= f.text_field :icon, autofocus: true, placeholder: "Icon URL", class: "field", :required => true %>
+      </div>
+
+      <div class="fieldcontainer">
+        <%= f.label :name, class: "hidden" %>
+        <%= f.text_field :name, placeholder: "Name", class: "field", :required => true %>
+      </div>
+
+    </div>
+  <% end %>
+
+  <div class="spacer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+
+</div>

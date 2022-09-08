@@ -3,8 +3,9 @@
   <div>MOVEMENTS</div>
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
-<div class="notice"><%= notice %></div>
-<div class="alert"><%= alert %></div>
+<% flash.each do |type, msg| %>
+  <%= msg %>
+<% end %>
 <div class="mainsection">
   <div class="catitem">
     <div class="icontitle">
@@ -35,4 +36,7 @@
       </div>
     </div>
   <% end %>
+</div>
+<div class="buttonwrapper">
+  <%= button_to 'NEW MOVEMENT', new_movement_path, method: :get, :class => 'loginbutton' %>
 </div>

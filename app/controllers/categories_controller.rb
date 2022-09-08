@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @categories = current_user.categories
   end
@@ -18,8 +18,11 @@ class CategoriesController < ApplicationController
   def create
     category = Category.new(params.require(:category).permit(:name, :icon))
     category.author_id = current_user.id
-
-    if category.save
+    found = Category.where(name: category.name, author_id: category.author_id)
+    if found != []
+      flash.now[:error] = 'Error: Category with that name already exists'
+      render :new, locals: { category: }, status: 422
+    elsif category.save
       flash[:success] = 'Category created successfully'
       redirect_to "/categories/#{category.id}"
     else

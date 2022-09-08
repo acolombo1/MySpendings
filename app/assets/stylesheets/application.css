@@ -51,6 +51,7 @@ body {
   background-color: #3778c2;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .signupbutton {
@@ -62,6 +63,7 @@ body {
   background-color: white;
   color: grey;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .newheader {
@@ -108,14 +110,6 @@ body {
 
 .cattitle {
   padding: 5px;
-}
-
-.fitem {
-  margin: 10px;
-}
-
-.submit {
-  margin: 10px;
 }
 
 .logincontainer {
@@ -166,9 +160,10 @@ input:-webkit-autofill:active {
 }
 
 .submitlogin {
-  background-color: blue;
+  background-color: rgb(62, 62, 250);
   color: white;
   border: none;
+  cursor: pointer;
 }
 
 .rawlink {
@@ -187,4 +182,13 @@ hr {
   color: gray;
   width: 90%;
   text-align: center;
+}
+
+.buttonwrapper {
+  margin-top: 20px;
+}
+
+.nodeco {
+  text-decoration: none;
+  color: black;
 }
