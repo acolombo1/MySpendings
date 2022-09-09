@@ -29,6 +29,10 @@
 ## Live Demo
 
 - https://my-spendings-acolombo1.herokuapp.com/
+## Demonstration video
+
+- https://www.loom.com/share/ca34f8bea39a446fbbb20d79aa663e9d
+
 ## Authors
 
 👤 **Aldo Colombo**
