@@ -2,7 +2,7 @@
 
 # My Spendings App
 
-> This is a Rails application that stores transactions (movements or spendings) in a database, organized in categories, allowing to administrate your budget, by calculating the totals for each category. It uses Devise for authentication.
+> This is a Rails application that stores transactions (movements or spendings) in a database, organized in categories, allowing to administrate your budget, by calculating the totals for each category. It uses Devise for authentication. Though it is designed for the mobile device, you could well use it from your browser.
 ## Built With
 
 - Ruby
