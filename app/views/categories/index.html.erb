@@ -1,0 +1,35 @@
+<div class="newheader">
+  <div>&nbsp;&nbsp;&nbsp;
+  <%= link_to destroy_user_session_path, data: { turbo_method: :delete } do %>
+    <%= image_tag("logout_white.png", :alt => "Logout") %>
+  <% end %></div>
+  <div>CATEGORIES</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+<% flash.each do |type, msg| %>
+  <%= msg %>
+<% end %>
+<div class="mainsection">
+  <% @categories.each do |category| %> 
+    <div class="catitem">
+      <div class="icontitle">
+        <div class="iconcontainer">
+          <%= link_to "/categories/#{ category.id }" do %>
+            <%= image_tag("#{ category.icon }", :alt => "", class: "constrained") %>
+          <% end %>
+        </div>
+        <div class="cattitle">
+          <%= link_to "/categories/#{ category.id }", class: "nodeco" do %>
+            <%= category.name %>
+          <% end %>
+        </div>
+      </div>
+      <div class="catamount">
+        <%= number_to_currency(category.total) %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="buttonwrapper">
+  <%= button_to 'Create NEW CATEGORY', new_category_path, method: :get, :class => 'loginbutton' %>
+</div>

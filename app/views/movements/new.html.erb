@@ -1,0 +1,54 @@
+<div class="allcontainer">
+  <%= form_with model: movement, url: create_movement_path, method: :post, local: true, scope: :movement do |f| %>
+    <div class="newheader">
+      <div>&nbsp;<%= link_to "<", "/categories/#{@category.id}", class: "rawlinkwhite" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>NEW MOVEMENT</div>
+      <div><%= f.submit "Create", class: 'submitlogin' %>&nbsp;</div>
+    </div>
+    <% flash.each do |type, msg| %>
+      <%= msg %>
+    <% end %>
+    <div class="logincontainer">
+      <div class="fieldcontainer">
+        <%= f.label :name, class: "hidden" %>
+        <%= f.text_field :name, autofocus: true, placeholder: "Name", class: "field", :required => true %>
+      </div>
+
+      <div class="fieldcontainer">
+        <%= f.label :amount, class: "hidden" %>
+        <%= f.number_field :amount, step: 0.01, placeholder: 0, :required => true, class: "field" %>
+      </div>
+    
+      <div class="fieldcontainer">
+        <%= f.label :category, class: "hidden" %>
+        <%= f.text_field :category, :readonly => true, :value => "#{ @category.name }", :required => true, class: "field" %>
+      </div>
+    
+      <div class="fieldcontainer">
+        <%= f.label :category2, class: "hidden" %>
+        <%= f.text_field :category2, placeholder: "2nd Category", class: "field" %>
+      </div>
+    
+      <div class="fieldcontainer">
+        <%= f.label :category3, class: "hidden" %>
+        <%= f.text_field :category3, placeholder: "3rd Category", class: "field" %>
+      </div>
+
+    </div>
+  <% end %>
+
+  <div class="spacer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+
+</div>

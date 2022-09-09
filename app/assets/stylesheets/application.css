@@ -1,0 +1,194 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('Proxima Nova Font.otf') format('otf');
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.loginbutton {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  border: none;
+  height: 50px;
+  text-align: center;
+  background-color: #3778c2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signupbutton {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  border: none;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  color: grey;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newheader {
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  background-color: #3778c2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mainsection {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.catitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 15px 10px 15px;
+}
+
+.icontitle {
+  display: flex;
+  align-items: center;
+  margin: 0 5px 0 5px;
+}
+
+.constrained {
+  width: 50px;
+  height: 50px;
+}
+
+.iconcontainer {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.cattitle {
+  padding: 5px;
+}
+
+.logincontainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: gray !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px white inset !important;
+}
+
+.field {
+  font-size: 1em;
+  border: 0;
+  outline: none;
+  padding: 20px;
+  color: gray;
+  background-color: white;
+  width: calc(100% - 40px);
+}
+
+.fieldcontainer {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+  color: gray;
+  margin-top: -1px;
+}
+
+.fpcontainer {
+  padding: 20px;
+  text-align: center;
+}
+
+.allcontainer {
+  background-color: rgb(243, 243, 243);
+}
+
+.submitlogin {
+  background-color: rgb(62, 62, 250);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.rawlink {
+  text-decoration: none;
+  color: gray;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.rawlinkwhite {
+  text-decoration: none;
+  color: white;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+hr {
+  color: gray;
+  width: 90%;
+  text-align: center;
+}
+
+.buttonwrapper {
+  margin-top: 20px;
+}
+
+.nodeco {
+  text-decoration: none;
+  color: black;
+}

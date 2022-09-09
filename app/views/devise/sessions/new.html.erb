@@ -1,0 +1,43 @@
+<div class="allcontainer">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+    <div class="newheader">
+      <div>&nbsp;<%= link_to "<", root_path, class: "rawlinkwhite" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>LOG IN</div>
+      <div><%= f.submit "Log in", class: 'submitlogin' %>&nbsp;</div>
+    </div>
+    <% flash.each do |type, msg| %>
+      <%= msg %>
+    <% end %>
+    <div class="logincontainer">
+      <div class="fieldcontainer">
+        <%= f.label :email, class: "hidden" %>
+        <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "field" %>
+      </div>
+
+      <div class="fieldcontainer">
+        <%= f.password_field :password, placeholder: "Password", class: "field" %>
+      </div>
+
+      <div class="hidden">
+        <%= f.label :remember_me %>
+        <%= f.check_box :remember_me, {checked: true} %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="fpcontainer">
+    <%= link_to "Forgot password?", new_password_path(resource_name), class: "rawlink" %><br />
+  </div>
+  <div class="spacer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+
+</div>
