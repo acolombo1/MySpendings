@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('Proxima Nova Font.otf') format('otf');
+  src: url('fonts/ProximaNovaFont.otf') format('otf');
 }
 
 .hidden {
