@@ -55,4 +55,5 @@ This project is [MIT](./LICENSE) licensed.
 
 Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella), which is
 [Creative Commons licensed](https://creativecommons.org/licenses/by-nc/4.0/).
-[Icons linked from Freepik - Flaticon](https://www.flaticon.com/free-icons/blood).
+
+[Icons linked from Freepik - Flaticon](https://www.flaticon.com/authors/flat-icons).
